@@ -1,0 +1,9 @@
+name: Freeze
+main: NawafPluginFrz\Nawaf1b
+version: 1.0.0
+api: 2.0.0
+load: POSTWORLD
+author: Nawaf1b
+commands:
+  freeze:
+    usage: "/freeze add name {name}"
