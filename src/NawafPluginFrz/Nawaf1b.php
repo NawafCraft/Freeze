@@ -13,7 +13,7 @@ class Nawaf1b extends \pocketmine\plugin\PluginBase implements \pocketmine\event
     }
     
     public function getClass(){
-        return new FreezingAPI($this->freeze);
+        return new Freezing($this->freeze);
     }
     
     public function onCommand(\pocketmine\command\CommandSender $sender, \pocketmine\command\Command $command, $label, array $args) {
