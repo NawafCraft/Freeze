@@ -46,7 +46,7 @@ class Nawaf1b extends \pocketmine\plugin\PluginBase implements \pocketmine\event
     
     public function onMove(\pocketmine\event\player\PlayerMoveEvent $ev){
         
-        if(in_array($ev->getPlayer()->getName(), $this->getClass()->freeze)){
+        if(in_array($ev->getPlayer()->getName(), $this->freeze)){
             $ev->setCancelled();
             $ev->getPlayer()->getLevel()->addParticle(new \pocketmine\level\particle\DestroyBlockParticle($ev->getPlayer(), \pocketmine\block\Block::get(97)));
         }
