@@ -7,4 +7,7 @@ author: Nawaf1b
 commands:
   freeze:
     usage: "/freeze <add/remove>"
+permissions:
+  freeze.command:
+    default: op
 
