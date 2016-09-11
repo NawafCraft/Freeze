@@ -4,14 +4,12 @@ namespace NawafPluginFrz;
 
 class Freezing implements API{
 
-    public $freeze = array();
-    
-    public function addFreeze($name){
-        return $this->freeze[$name] = $name;
+    public function addFreeze($var,$name){
+        return $var[$name] = $name;
     }
     
-    public function removeFreeze($name){
-        unset($this->freeze[$name]);
+    public function removeFreeze($var,$name){
+        unset($var[$name]);
     }
     
 }
