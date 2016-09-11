@@ -4,9 +4,9 @@ namespace NawafPluginFrz;
 
 interface API{
     
-    public function addFreeze($name);
+    public function addFreeze($var,$name);
     
-    public function removeFreeze($name);
+    public function removeFreeze($var,$name);
     
 }
 ?>
