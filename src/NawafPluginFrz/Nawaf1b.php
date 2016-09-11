@@ -4,13 +4,12 @@ namespace NawafPluginFrz;
 
 class Nawaf1b extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Listener{
     
-    public $freeze = array();
     public function onEnable() {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
     
     public function getClass(){
-        return new Freezing($this->freeze);
+        return new Freezing();
     }
     
     public function onCommand(\pocketmine\command\CommandSender $sender, \pocketmine\command\Command $command, $label, array $args) {
@@ -45,7 +44,7 @@ class Nawaf1b extends \pocketmine\plugin\PluginBase implements \pocketmine\event
     
     public function onMove(\pocketmine\event\player\PlayerMoveEvent $ev){
         
-        if(in_array($ev->getPlayer()->getName(), $this->freeze)){
+        if(in_array($ev->getPlayer()->getName(), $this->getClass()->freeze)){
             $ev->setCancelled();
             $ev->getPlayer()->getLevel()->addParticle(new \pocketmine\level\particle\DestroyBlockParticle($ev->getPlayer(), \pocketmine\block\Block::get(97)));
         }
