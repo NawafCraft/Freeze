@@ -12,7 +12,7 @@ class Nawaf1b extends \pocketmine\plugin\PluginBase implements \pocketmine\event
     
     public function onCommand(\pocketmine\command\CommandSender $sender, \pocketmine\command\Command $command, $label, array $args) {
         if($command->getName() == "freeze"){
-        if($sender->isOp()){
+        //if($sender->isOp()){
            if($args[0] == "add"){
             if($args[1] == "@a"){
                 foreach ($this->getServer()->getOnlinePlayers() as $p){
@@ -40,7 +40,7 @@ class Nawaf1b extends \pocketmine\plugin\PluginBase implements \pocketmine\event
            }
         }
     }
-    }
+    //}
     
     public function onMove(\pocketmine\event\player\PlayerMoveEvent $ev){
         
