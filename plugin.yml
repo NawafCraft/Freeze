@@ -6,4 +6,5 @@ load: POSTWORLD
 author: Nawaf1b
 commands:
   freeze:
-    usage: ""
+    usage: "/freeze <add/remove>"
+
